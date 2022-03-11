@@ -1021,19 +1021,26 @@ img {
 #aa-product .aa-product-area .aa-product-inner .aa-product-catg {
   float: left;
 }
-#aa-product .aa-product-area .aa-product-inner #men {
+#aa-product .aa-product-area .aa-product-inner #huong_nen {
   text-align: center;
   padding-bottom: 35px;
 }
-#aa-product .aa-product-area .aa-product-inner #electronics {
+#aa-product .aa-product-area .aa-product-inner #tram_nu {
   text-align: center;
   padding-bottom: 35px;
 }
-#aa-product .aa-product-area .aa-product-inner #women {
+#aa-product .aa-product-area .aa-product-inner #tra_tram {
   text-align: center;
   padding-bottom: 35px;
 }
-
+#aa-product .aa-product-area .aa-product-inner #tram_thien {
+  text-align: center;
+  padding-bottom: 35px;
+}
+#aa-product .aa-product-area .aa-product-inner #but_tram {
+  text-align: center;
+  padding-bottom: 35px;
+}
 .aa-product-nav {
   display: inline-block;
   text-align: center;
