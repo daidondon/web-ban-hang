@@ -1382,9 +1382,11 @@ img {
   height: 0;
   overflow-y: hidden;
 }
-#aa-popular-category .aa-popular-category-area #popular,
-#aa-popular-category .aa-popular-category-area #featured,
-#aa-popular-category .aa-popular-category-area #latest {
+#aa-popular-category .aa-popular-category-area #hương_nen,
+#aa-popular-category .aa-popular-category-area #tram_nu,
+#aa-popular-category .aa-popular-category-area #tra_tram,
+#aa-popular-category .aa-popular-category-area #tram_thien,
+#aa-popular-category .aa-popular-category-area #but_tram {
   text-align: center;
 }
 
