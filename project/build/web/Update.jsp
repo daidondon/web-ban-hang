@@ -1,9 +1,8 @@
 <%-- 
-    Document   : product-detail
-    Created on : Mar 21, 2022, 5:04:38 AM
+    Document   : Update
+    Created on : Mar 22, 2022, 8:07:09 PM
     Author     : HDC
 --%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -199,50 +198,48 @@
   </section>
   <!-- / catg header banner section -->
 
-  <!-- product category -->
-  <section id="aa-product-details">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="aa-product-details-area">
-            <div class="aa-product-details-content">
-              <div class="row">
-                <!-- Modal view slider -->
-                <div class="col-md-5 col-sm-5 col-xs-12">                              
-                  <div class="aa-product-view-slider">                                                   
-                      <div class="simpleLens-container">
-                        <div class="simpleLens-lens-image"><img src="${detail.image}" class="simpleLens-big-image"></a></div>
-                      </div>
-                  </div>
-                </div>
-                <!-- Modal view content -->
-                <div class="col-md-7 col-sm-7 col-xs-12">
-                  <div class="aa-product-view-content">
-                    <h3>${detail.name}</h3>
-                    <div class="aa-price-block">
-                        Giá sản phẩm: <span class="aa-product-view-price">Đ ${detail.price}</span><br>
-                      Số lượng: <span class="aa-product-view-price"> ${detail.sl}</span>
-                    </div>
-                    
-                    <div class="aa-prod-quantity">
-                      <form action="">
-                          <input type="number" name="quantity" />
-                      </form>
-                    </div>
-                    <figure>
-                        <a class="aa-add-card-btn"href="product-detail.html"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
-                    </figure>
-                  </div>
-                </div>
-              </div>
-            </div>
-           
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- / product category -->
+  <!-- ? -->
+  <center><h2>Thay đổi sản phẩm của shop</h2></center> 
+  
+<form action="update" method="post">  
+<table class="table">
+        <tr>
+            <td scope="col">Name</td>
+            <td>
+                <input type="text" name="name">
+            </td>
+        </tr>
+        <tr>
+            <td scope="col">Price</td>
+            <td>
+                <input type="number" name="price">
+            </td>
+        </tr>
+        <tr>
+            <td scope="col">Image</td>
+            <td>
+                <input type="text" name="img">
+            </td>
+        </tr>
+        <tr>
+            <td scope="col">SL</td>
+            <td>
+                <input type="number" name="sl">
+            </td>
+        </tr>
+        <tr>
+            <td scope="col">Category(1-5)</td>
+            <td>
+                <input type="number" name="carid">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit"  scope="col">Update Product</button></td>
+        </tr>
+</table>
+</form>
+  <!-- ? -->
 
   <!-- footer -->  
   <footer id="aa-footer">

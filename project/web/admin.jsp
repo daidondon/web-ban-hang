@@ -1,9 +1,8 @@
 <%-- 
-    Document   : product-detail
-    Created on : Mar 21, 2022, 5:04:38 AM
+    Document   : admin
+    Created on : Mar 21, 2022, 1:38:15 PM
     Author     : HDC
 --%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -199,50 +198,71 @@
   </section>
   <!-- / catg header banner section -->
 
-  <!-- product category -->
-  <section id="aa-product-details">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="aa-product-details-area">
-            <div class="aa-product-details-content">
-              <div class="row">
-                <!-- Modal view slider -->
-                <div class="col-md-5 col-sm-5 col-xs-12">                              
-                  <div class="aa-product-view-slider">                                                   
-                      <div class="simpleLens-container">
-                        <div class="simpleLens-lens-image"><img src="${detail.image}" class="simpleLens-big-image"></a></div>
-                      </div>
-                  </div>
-                </div>
-                <!-- Modal view content -->
-                <div class="col-md-7 col-sm-7 col-xs-12">
-                  <div class="aa-product-view-content">
-                    <h3>${detail.name}</h3>
-                    <div class="aa-price-block">
-                        Giá sản phẩm: <span class="aa-product-view-price">Đ ${detail.price}</span><br>
-                      Số lượng: <span class="aa-product-view-price"> ${detail.sl}</span>
-                    </div>
+  <!-- ? -->
+  <center><h2>Các sản phẩm của shop</h2></center> 
+  
+<form>  
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Image</th>
+      <th scope="col">SL</th>
+      <th scope="col">Category</th>
+      <th scope="col">Hoạt động</th>
+    </tr>
+  </thead>
+  <tbody>
+    <c:forEach items="${listP}" var="o">
+                <tr>
+                    <td>${o.id}</td>
+                    <td>${o.name}</td>
+                    <td>${o.price}</td>
+                    <td>${o.image}</td>
+                    <td>${o.sl}</td>
+                    <td>
+                        <c:if test="${o.cateID == 1}">
+                            1.Hương nén TM
+                        </c:if>
+                        <c:if test="${o.cateID == 2 }">
+                            2.Hương nén trầm
+                        </c:if>
+                        <c:if test="${o.cateID == 3 }">
+                            3.Trầm nụ
+                        </c:if>
+                        <c:if test="${o.cateID == 4 }">
+                            4.Trà trầm
+                        </c:if>
+                        <c:if test="${o.cateID == 5 }">
+                            5.Trầm thiền
+                        </c:if>
+                    </td>
+                    <td>
+                        <a href="update?sid=${o.id}">update</a>
+                        <a>||</a>
+                        <a href="#" onclick="Mess(${o.id})">delete</a>
+                    </td>
+                </tr>
+            </c:forEach>    
+  </tbody>
+</table>
+
                     
-                    <div class="aa-prod-quantity">
-                      <form action="">
-                          <input type="number" name="quantity" />
-                      </form>
-                    </div>
-                    <figure>
-                        <a class="aa-add-card-btn"href="product-detail.html"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
-                    </figure>
-                  </div>
-                </div>
-              </div>
-            </div>
-           
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- / product category -->
+  <center><a text-align:center href="Add.jsp" >Create new product</a></center> 
+  
+            <script>
+        function Mess(id){
+            var option = confirm('Are you sure to delete');
+            if(option === true){
+                window.location.href = 'delete?sid='+id;
+                
+            }
+        }
+    </script>
+</form>
+  <!-- ? -->
 
   <!-- footer -->  
   <footer id="aa-footer">

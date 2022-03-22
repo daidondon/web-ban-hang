@@ -147,6 +147,63 @@ public class dao {
         }
     }
     
+    public void insertProduct(String id, String name, double price, String image, int sl, int cateID){
+        String query = "insert into\n" +
+"Product \n" +
+"values(?,?,?,?,?,?)";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, id);
+            ps.setString(2, name);
+            ps.setDouble(3, price);
+            ps.setString(4, image);
+            ps.setInt(5, sl);
+            ps.setInt(6, cateID);
+            ps.executeUpdate();
+             
+        } catch (Exception e) {
+            System.out.println(e.toString());
+        }
+    }
+    
+        public void delProduct(String id){
+        String query = "delete from Product\n" +
+" where id = ?";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, id);
+            ps.executeUpdate();
+        } catch (Exception e) {
+            System.out.println(e.toString());
+        }
+    }
+        
+    public void updateProduct(String id, String name, double price, String image, int sl, int cateID){
+        String query = " update Product\n" +
+" set [name] = ?,\n" +
+" price =?,\n" +
+" img=?,\n" +
+" sl=?,\n" +
+" cateID =?\n" +
+" where id=?";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, name);
+            ps.setDouble(2, price);
+            ps.setString(3, image);
+            ps.setInt(4, sl);
+            ps.setInt(5,cateID);
+            ps.setString(6, id);
+            ps.executeUpdate();
+                        
+
+        } catch (Exception e) {
+        }
+    }
+    
     public static void main(String[] args) {
         dao dao= new dao();
         List<product>list =dao.getAllProduct();

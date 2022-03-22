@@ -82,7 +82,7 @@
               <div class="aa-header-top-right">
                 <ul class="aa-head-top-nav-right">
                     <c:if test="${sessionScope.acc.isAdmin ==1}">  
-                  <li><a href="">Amin</a></li>
+                  <li><a href="admin.jsp">Amin</a></li>
                     </c:if>
                   <li><a href="account.jsp">Đăng ký</a></li>
                   <c:if test="${sessionScope.acc !=null}">
@@ -304,7 +304,7 @@
                         <a class="aa-product-img" ><img src="${o.image}" alt="huong img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
-                          <h4 class="aa-product-title"><a href="detail?id=${o.id}">${o.name}</a></h4>
+                          <h4 class="aa-product-title"><a href="detail?pid=${o.id}">${o.name}</a></h4>
                           <span class="aa-product-price">Đ ${o.price}</span><span class="aa-product-price"><del></del></span>
                         </figcaption>
                       </figure>                     

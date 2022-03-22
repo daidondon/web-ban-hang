@@ -24,6 +24,18 @@
         <servlet-name>LogOutControl</servlet-name>
         <servlet-class>controller.LogOutControl</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>addcontrol</servlet-name>
+        <servlet-class>controller.addcontrol</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>deletecontrol</servlet-name>
+        <servlet-class>controller.deletecontrol</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>updatecontrol</servlet-name>
+        <servlet-class>controller.updatecontrol</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>homecontroller</servlet-name>
         <url-pattern>/homecontroller</url-pattern>
@@ -47,6 +59,18 @@
     <servlet-mapping>
         <servlet-name>LogOutControl</servlet-name>
         <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addcontrol</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>deletecontrol</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>updatecontrol</servlet-name>
+        <url-pattern>/update</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

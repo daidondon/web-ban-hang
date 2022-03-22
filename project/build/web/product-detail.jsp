@@ -220,7 +220,8 @@
                   <div class="aa-product-view-content">
                     <h3>${detail.name}</h3>
                     <div class="aa-price-block">
-                      <span class="aa-product-view-price">Đ ${detail.price}</span>
+                        Giá sản phẩm: <span class="aa-product-view-price">Đ ${detail.price}</span><br>
+                      Số lượng: <span class="aa-product-view-price"> ${detail.sl}</span>
                     </div>
                     
                     <div class="aa-prod-quantity">
