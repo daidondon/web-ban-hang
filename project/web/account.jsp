@@ -79,8 +79,18 @@
               <!-- / header top left -->
               <div class="aa-header-top-right">
                 <ul class="aa-head-top-nav-right">
-                  <li><a href="account.html">Đăng ký</a></li>
-                  <li><a href="" data-toggle="modal" data-target="#login-modal">Đăng nhập</a></li>
+                    <c:if test="${sessionScope.acc.isAdmin ==1}">  
+                  <li><a href="load">Amin</a></li>
+                    </c:if>
+                  <li><a href="account.jsp">Đăng ký</a></li>
+                  <c:if test="${sessionScope.acc !=null}">
+                  <li><a href="logout">Đăng xuất</a></li>
+                  </c:if>
+                  <c:if test="${sessionScope.acc ==null}">
+                   <li><a href="account.jsp">Đăng nhập</a></li>
+                  </c:if>
+                 
+                  
                 </ul>
               </div>
             </div>
@@ -103,44 +113,7 @@
                  <a href="index.jsp"><img src="img/logo.jpg" alt="logo img" width=280px height=100px></a> 
               </div>
               <!-- / logo  -->
-               <!-- cart box -->
-              <div class="aa-cartbox">
-                <a class="aa-cart-link" href="#">
-                  <span class="fa fa-shopping-basket"></span>
-                  <span class="aa-cart-title"></span>
-                  <span class="aa-cart-notify">2</span>
-                </a>
-                <div class="aa-cartbox-summary">
-                  <ul>
-                    <li>
-                      <a class="aa-cartbox-img" href="#"><img src="img/woman-small-2.jpg" alt="img"></a>
-                      <div class="aa-cartbox-info">
-                        <h4><a href="#">Product Name</a></h4>
-                        <p>1 x $250</p>
-                      </div>
-                      <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
-                    </li>
-                    <li>
-                      <a class="aa-cartbox-img" href="#"><img src="img/woman-small-1.jpg" alt="img"></a>
-                      <div class="aa-cartbox-info">
-                        <h4><a href="#">Product Name</a></h4>
-                        <p>1 x $250</p>
-                      </div>
-                      <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
-                    </li>                    
-                    <li>
-                      <span class="aa-cartbox-total-title">
-                        Total
-                      </span>
-                      <span class="aa-cartbox-total-price">
-                        $500
-                      </span>
-                    </li>
-                  </ul>
-                  <a class="aa-cartbox-checkout aa-primary-btn" href="checkout.jsp">Checkout</a>
-                </div>
-              </div>
-              <!-- / cart box -->
+
               <!-- search box -->
               <div class="aa-search-box">
                 <form action="">
@@ -174,51 +147,15 @@
           <div class="navbar-collapse collapse">
             <!-- Left nav -->
             <ul class="nav navbar-nav">
-              <li><a href="#">Hương nén <span class="caret"></span></a>
-                <ul class="dropdown-menu">                
-                  <li><a href="#">Hương thảo mộc  <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Hương nén</a></li>
-                      <li><a href="#">Hương sào</a></li>
-                      <li><a href="#">Hương vòng</a></li>                                      
-                    </ul>
-                  </li>
-                  <li><a href="#">Hương trầm  <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                       <li><a href="#">Hương nén</a></li>
-                      <li><a href="#">Hương sào</a></li>
-                      <li><a href="#">Hương vòng</a></li>                                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
+                <li><a href="blog-archive-2.jsp">Hương nén TM</a></li>
+                <li><a href="blog-archive-2.jsp">Hương nén trầm</a></li>
+                <li><a href="blog-archive-2.jsp">Trầm nụ</a></li>
+                <li><a href="blog-archive-2.jsp">Trà trầm</a></li>
+                <li><a href="blog-archive-2.jsp">Trầm thiền</a></li>
+                
+                <li><a href="blog-archive-2.jsp">Blog</a></li>
               
-              <li><a href="#">Trầm nụ <span class="caret"></span></a>
-                <ul class="dropdown-menu">  
-                  <li><a href="#">Nụ thảo mộc</a></li>                                                                
-                  <li><a href="#">Nụ trầm <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Trầm khói</a></li>
-                      <li><a href="#">Trầm thơm</a></li>                  
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              
-              <li><a href="#">Trà trầm </a></li>
-              
-              <li><a href="#">Trầm thiền <span class="caret"></span></a>
-                <ul class="dropdown-menu">                
-                  <li><a href="#">Bộ trầm thiền</a></li>
-                  <li><a href="#">Ống hương thiền </a></li>               
-                </ul>
-              </li>
-              
-              <li><a href="#">Bút trầm </a></li>   
-              
-              <li><a href="blog-archive-2.html">Blog</a></li>
-              
-              <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.jsp">Contact</a></li>
 
             </ul>
           </div><!--/.nav-collapse -->
@@ -227,7 +164,7 @@
     </div>
       
   </section>
-  <!-- / menu -->  
+  <!-- / menu -->
  
   <!-- catg header banner section -->
   <section id="aa-catg-head-banner">

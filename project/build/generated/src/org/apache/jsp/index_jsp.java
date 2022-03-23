@@ -12,6 +12,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
   private static java.util.List<String> _jspx_dependants;
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -21,10 +22,12 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   public void _jspInit() {
     _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
     _jspx_tagPool_c_forEach_var_items.release();
+    _jspx_tagPool_c_if_test.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -130,8 +133,21 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("              <!-- / header top left -->\n");
       out.write("              <div class=\"aa-header-top-right\">\n");
       out.write("                <ul class=\"aa-head-top-nav-right\">\n");
+      out.write("                    ");
+      if (_jspx_meth_c_if_0(_jspx_page_context))
+        return;
+      out.write("\n");
       out.write("                  <li><a href=\"account.jsp\">Đăng ký</a></li>\n");
-      out.write("                  <li><a href=\"account.jsp\">Đăng nhập</a></li>\n");
+      out.write("                  ");
+      if (_jspx_meth_c_if_1(_jspx_page_context))
+        return;
+      out.write("\n");
+      out.write("                  ");
+      if (_jspx_meth_c_if_2(_jspx_page_context))
+        return;
+      out.write("\n");
+      out.write("                 \n");
+      out.write("                  \n");
       out.write("                </ul>\n");
       out.write("              </div>\n");
       out.write("            </div>\n");
@@ -334,9 +350,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("          <div class=\"row\">\n");
       out.write("            <div class=\"aa-popular-category-area\">\n");
       out.write("              <!-- start prduct navigation -->\n");
-      out.write("              <!-- Tab panes -->\n");
-      out.write("              <div class=\"tab-content\">\n");
-      out.write("                  \n");
       out.write("                <!-- Start huong nen category -->\n");
       out.write("                <div>\n");
       out.write("                  <ul class=\"aa-product-catg aa-popular-slider\">\n");
@@ -347,9 +360,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                  </ul>\n");
       out.write("                </div>\n");
       out.write("                <!-- / huong nen product category -->\n");
-      out.write("                                \n");
-      out.write("                             \n");
-      out.write("              </div>\n");
+      out.write("\n");
       out.write("            </div>\n");
       out.write("          </div> \n");
       out.write("        </div>\n");
@@ -407,7 +418,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("              <div class=\"col-md-4 col-sm-4\">\n");
       out.write("                <div class=\"aa-latest-blog-single\">\n");
       out.write("                  <figure class=\"aa-blog-img\">                    \n");
-      out.write("                    <a href=\"blog-single.html\"><img src=\"img/promo-banner-1.jpg\" alt=\"img\"></a>  \n");
+      out.write("                    <a href=\"blog-single.jsp\"><img src=\"img/promo-banner-1.jpg\" alt=\"img\"></a>  \n");
       out.write("                      <figcaption class=\"aa-blog-img-caption\">\n");
       out.write("                      <span href=\"blog-single.jsp\"><i class=\"fa fa-eye\"></i>5K</span>\n");
       out.write("                      <a href=\"blog-single.jsp\"><i class=\"fa fa-thumbs-o-up\"></i>426</a>\n");
@@ -551,6 +562,90 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     }
   }
 
+  private boolean _jspx_meth_c_if_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_if_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_if_0.setParent(null);
+    _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.acc.isAdmin ==1}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
+    if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("  \n");
+        out.write("                  <li><a href=\"load\">Amin</a></li>\n");
+        out.write("                    ");
+        int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_if_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
+      return true;
+    }
+    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_if_1(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_1 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_if_1.setPageContext(_jspx_page_context);
+    _jspx_th_c_if_1.setParent(null);
+    _jspx_th_c_if_1.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.acc !=null}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_if_1 = _jspx_th_c_if_1.doStartTag();
+    if (_jspx_eval_c_if_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\n");
+        out.write("                  <li><a href=\"logout\">Đăng xuất</a></li>\n");
+        out.write("                  ");
+        int evalDoAfterBody = _jspx_th_c_if_1.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_if_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_1);
+      return true;
+    }
+    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_1);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_if_2(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_2 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_if_2.setPageContext(_jspx_page_context);
+    _jspx_th_c_if_2.setParent(null);
+    _jspx_th_c_if_2.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.acc ==null}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_if_2 = _jspx_th_c_if_2.doStartTag();
+    if (_jspx_eval_c_if_2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\n");
+        out.write("                   <li><a href=\"account.jsp\">Đăng nhập</a></li>\n");
+        out.write("                  ");
+        int evalDoAfterBody = _jspx_th_c_if_2.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_if_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_2);
+      return true;
+    }
+    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_2);
+    return false;
+  }
+
   private boolean _jspx_meth_c_forEach_0(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -574,7 +669,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("\" alt=\"huong img\"></a>\n");
           out.write("                        <a class=\"aa-add-card-btn\"href=\"#\"><span class=\"fa fa-shopping-cart\"></span>Add To Cart</a>\n");
           out.write("                         <figcaption>\n");
-          out.write("                          <h4 class=\"aa-product-title\"><a href=\"detail?id=");
+          out.write("                          <h4 class=\"aa-product-title\"><a href=\"detail?pid=");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${o.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write('"');
           out.write('>');

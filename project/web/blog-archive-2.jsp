@@ -60,7 +60,7 @@
     <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
   <!-- END SCROLL TOP BUTTON -->
 
-  <!-- Start header section -->
+   <!-- Start header section -->
   <header id="aa-header">
     <!-- start header top  -->
     <div class="aa-header-top">
@@ -80,8 +80,18 @@
               <!-- / header top left -->
               <div class="aa-header-top-right">
                 <ul class="aa-head-top-nav-right">
-                  <li><a href="account.html">Đăng ký</a></li>
-                  <li><a href="" data-toggle="modal" data-target="#login-modal">Đăng nhập</a></li>
+                    <c:if test="${sessionScope.acc.isAdmin ==1}">  
+                  <li><a href="load">Amin</a></li>
+                    </c:if>
+                  <li><a href="account.jsp">Đăng ký</a></li>
+                  <c:if test="${sessionScope.acc !=null}">
+                  <li><a href="logout">Đăng xuất</a></li>
+                  </c:if>
+                  <c:if test="${sessionScope.acc ==null}">
+                   <li><a href="account.jsp">Đăng nhập</a></li>
+                  </c:if>
+                 
+                  
                 </ul>
               </div>
             </div>
@@ -101,47 +111,10 @@
               <div class="aa-logo">
                 <!-- Text based logo -->
                 <!-- img based logo -->
-                 <a href="index.html"><img src="img/logo.jpg" alt="logo img" width=280px height=100px></a> 
+                 <a href="index.jsp"><img src="img/logo.jpg" alt="logo img" width=280px height=100px></a> 
               </div>
               <!-- / logo  -->
-               <!-- cart box -->
-              <div class="aa-cartbox">
-                <a class="aa-cart-link" href="#">
-                  <span class="fa fa-shopping-basket"></span>
-                  <span class="aa-cart-title"></span>
-                  <span class="aa-cart-notify">2</span>
-                </a>
-                <div class="aa-cartbox-summary">
-                  <ul>
-                    <li>
-                      <a class="aa-cartbox-img" href="#"><img src="img/woman-small-2.jpg" alt="img"></a>
-                      <div class="aa-cartbox-info">
-                        <h4><a href="#">Product Name</a></h4>
-                        <p>1 x $250</p>
-                      </div>
-                      <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
-                    </li>
-                    <li>
-                      <a class="aa-cartbox-img" href="#"><img src="img/woman-small-1.jpg" alt="img"></a>
-                      <div class="aa-cartbox-info">
-                        <h4><a href="#">Product Name</a></h4>
-                        <p>1 x $250</p>
-                      </div>
-                      <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
-                    </li>                    
-                    <li>
-                      <span class="aa-cartbox-total-title">
-                        Total
-                      </span>
-                      <span class="aa-cartbox-total-price">
-                        $500
-                      </span>
-                    </li>
-                  </ul>
-                  <a class="aa-cartbox-checkout aa-primary-btn" href="checkout.html">Checkout</a>
-                </div>
-              </div>
-              <!-- / cart box -->
+
               <!-- search box -->
               <div class="aa-search-box">
                 <form action="">
@@ -175,51 +148,15 @@
           <div class="navbar-collapse collapse">
             <!-- Left nav -->
             <ul class="nav navbar-nav">
-              <li><a href="#">Hương nén <span class="caret"></span></a>
-                <ul class="dropdown-menu">                
-                  <li><a href="#">Hương thảo mộc  <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Hương nén</a></li>
-                      <li><a href="#">Hương sào</a></li>
-                      <li><a href="#">Hương vòng</a></li>                                      
-                    </ul>
-                  </li>
-                  <li><a href="#">Hương trầm  <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                       <li><a href="#">Hương nén</a></li>
-                      <li><a href="#">Hương sào</a></li>
-                      <li><a href="#">Hương vòng</a></li>                                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
+                <li><a href="blog-archive-2.jsp">Hương nén TM</a></li>
+                <li><a href="blog-archive-2.jsp">Hương nén trầm</a></li>
+                <li><a href="blog-archive-2.jsp">Trầm nụ</a></li>
+                <li><a href="blog-archive-2.jsp">Trà trầm</a></li>
+                <li><a href="blog-archive-2.jsp">Trầm thiền</a></li>
+                
+                <li><a href="blog-archive-2.jsp">Blog</a></li>
               
-              <li><a href="#">Trầm nụ <span class="caret"></span></a>
-                <ul class="dropdown-menu">  
-                  <li><a href="#">Nụ thảo mộc</a></li>                                                                
-                  <li><a href="#">Nụ trầm <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Trầm khói</a></li>
-                      <li><a href="#">Trầm thơm</a></li>                  
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              
-              <li><a href="#">Trà trầm </a></li>
-              
-              <li><a href="#">Trầm thiền <span class="caret"></span></a>
-                <ul class="dropdown-menu">                
-                  <li><a href="#">Bộ trầm thiền</a></li>
-                  <li><a href="#">Ống hương thiền </a></li>               
-                </ul>
-              </li>
-              
-              <li><a href="#">Bút trầm </a></li>   
-              
-              <li><a href="blog-archive-2.html">Blog</a></li>
-              
-              <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.jsp">Contact</a></li>
 
             </ul>
           </div><!--/.nav-collapse -->
@@ -228,7 +165,7 @@
     </div>
       
   </section>
-  <!-- / menu --> 
+  <!-- / menu -->
  
   <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
@@ -259,51 +196,51 @@
                     <div class="col-md-4 col-sm-4">
                       <article class="aa-latest-blog-single">
                         <figure class="aa-blog-img">                    
-                          <a href="blog-single.html"><img alt="img" src="img/promo-banner-1.jpg"></a>  
+                          <a href="blog-single.jsp"><img alt="img" src="img/promo-banner-1.jpg"></a>  
                             <figcaption class="aa-blog-img-caption">
-                            <span href="blog-single.html"><i class="fa fa-eye"></i>5K</span>
-                            <a href="blog-single.html"><i class="fa fa-thumbs-o-up"></i>426</a>
-                            <a href="blog-single.html"><i class="fa fa-comment-o"></i>20</a>
-                            <span href="blog-single.html"><i class="fa fa-clock-o"></i>June 26, 2016</span>
+                            <span href="blog-single.jsp"><i class="fa fa-eye"></i>5K</span>
+                            <a href="blog-single.jsp"><i class="fa fa-thumbs-o-up"></i>426</a>
+                            <a href="blog-single.jsp"><i class="fa fa-comment-o"></i>20</a>
+                            <span href="blog-single.jsp"><i class="fa fa-clock-o"></i>June 26, 2016</span>
                           </figcaption>                          
                         </figure>
                         <div class="aa-blog-info">
-                          <h3 class="aa-blog-title"><a href="blog-single.html">Trầm hương đối với đời sống tâm linh</a></h3>
-                          <a class="aa-read-mor-btn" href="blog-single.html">Read more <span class="fa fa-long-arrow-right"></span></a>
+                          <h3 class="aa-blog-title"><a href="blog-single.jsp">Trầm hương đối với đời sống tâm linh</a></h3>
+                          <a class="aa-read-mor-btn" href="blog-single.jsp">Read more <span class="fa fa-long-arrow-right"></span></a>
                         </div>
                       </article>
                     </div>
                     <div class="col-md-4 col-sm-4">
                       <article class="aa-latest-blog-single">
                         <figure class="aa-blog-img">                    
-                          <a href="blog-single2.html"><img alt="img" src="img/promo-banner-2.jpg"></a>  
+                          <a href="blog-single2.jsp"><img alt="img" src="img/promo-banner-2.jpg"></a>  
                             <figcaption class="aa-blog-img-caption">
-                            <span href="blog-single2.html"><i class="fa fa-eye"></i>3K</span>
-                            <a href="blog-single2.html"><i class="fa fa-thumbs-o-up"></i>226</a>
-                            <a href="blog-single2.html"><i class="fa fa-comment-o"></i>20</a>
-                            <span href="blog-single2.html"><i class="fa fa-clock-o"></i>June 21, 2017</span>
+                            <span href="blog-single2.jsp"><i class="fa fa-eye"></i>3K</span>
+                            <a href="blog-single2.jsp"><i class="fa fa-thumbs-o-up"></i>226</a>
+                            <a href="blog-single2.jsp"><i class="fa fa-comment-o"></i>20</a>
+                            <span href="blog-single2.jsp"><i class="fa fa-clock-o"></i>June 21, 2017</span>
                           </figcaption>                          
                         </figure>
                         <div class="aa-blog-info">
-                          <h3 class="aa-blog-title"><a href="blog-single2.html">Phân loại trầm hương</a></h3>
-                          <a class="aa-read-mor-btn" href="blog-single2.html">Read more <span class="fa fa-long-arrow-right"></span></a>
+                          <h3 class="aa-blog-title"><a href="blog-single2.jsp">Phân loại trầm hương</a></h3>
+                          <a class="aa-read-mor-btn" href="blog-single2.jsp">Read more <span class="fa fa-long-arrow-right"></span></a>
                         </div>
                       </article>
                     </div>
                     <div class="col-md-4 col-sm-4">
                       <article class="aa-latest-blog-single">
                         <figure class="aa-blog-img">                    
-                          <a href="blog-single3.html"><img alt="img" src="img/promo-banner-3.jpg"></a>  
+                          <a href="blog-single3.jsp"><img alt="img" src="img/promo-banner-3.jpg"></a>  
                             <figcaption class="aa-blog-img-caption">
-                            <span href="blog-single3.html"><i class="fa fa-eye"></i>1K</span>
-                            <a href="blog-single3.html"><i class="fa fa-thumbs-o-up"></i>600</a>
-                            <a href="blog-single3.html"><i class="fa fa-comment-o"></i>50</a>
-                            <span href="blog-single3.html"><i class="fa fa-clock-o"></i>May 24, 2019</span>
+                            <span href="blog-single3.jsp"><i class="fa fa-eye"></i>1K</span>
+                            <a href="blog-single3.jsp"><i class="fa fa-thumbs-o-up"></i>600</a>
+                            <a href="blog-single3.jsp"><i class="fa fa-comment-o"></i>50</a>
+                            <span href="blog-single3.jsp"><i class="fa fa-clock-o"></i>May 24, 2019</span>
                           </figcaption>                          
                         </figure>
                         <div class="aa-blog-info">
-                          <h3 class="aa-blog-title"><a href="blog-single3.html">Trầm hương đối với sức khoẻ con người</a></h3>
-                          <a class="aa-read-mor-btn" href="blog-single3.html">Read more <span class="fa fa-long-arrow-right"></span></a>
+                          <h3 class="aa-blog-title"><a href="blog-single3.jsp">Trầm hương đối với sức khoẻ con người</a></h3>
+                          <a class="aa-read-mor-btn" href="blog-single3.jsp">Read more <span class="fa fa-long-arrow-right"></span></a>
                         </div>
                       </article>
                     </div>                   
@@ -316,8 +253,8 @@
                   <div class="aa-sidebar-widget">
                     <h3>Tags</h3>
                     <div class="tag-cloud">
-                      <a href="blog-archive-2.html">Trầm hương</a>
-                      <a href="blog-archive-2.html">Phân loại</a>
+                      <a href="blog-archive-2.jsp">Trầm hương</a>
+                      <a href="blog-archive-2.htmljsp">Phân loại</a>
                     </div>
                   </div>
                 </aside>
@@ -381,31 +318,6 @@
     </div>
   <!-- / footer -->
   
-   <!-- Login Modal -->  
-  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">                      
-        <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4>Đăng nhập</h4>
-          <form class="aa-login-form" action="">
-            <label for="">Username or Email address<span>*</span></label>
-            <input type="text" placeholder="Username or email">
-            <label for="">Password<span>*</span></label>
-            <input type="password" placeholder="Password">
-            <button class="aa-browse-btn" type="submit">Login</button>
-            <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
-            <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
-            <div class="aa-register-now">
-              Don't have an account?<a href="account.html">Đăng ký ngay!</a>
-            </div>
-          </form>
-        </div>                        
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div>
-
-
     
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

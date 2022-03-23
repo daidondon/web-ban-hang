@@ -79,8 +79,18 @@
               <!-- / header top left -->
               <div class="aa-header-top-right">
                 <ul class="aa-head-top-nav-right">
-                  <li><a href="account.html">Đăng ký</a></li>
-                  <li><a href="" data-toggle="modal" data-target="#login-modal">Đăng nhập</a></li>
+                    <c:if test="${sessionScope.acc.isAdmin ==1}">  
+                  <li><a href="admin.jsp">Amin</a></li>
+                    </c:if>
+                  <li><a href="account.jsp">Đăng ký</a></li>
+                  <c:if test="${sessionScope.acc !=null}">
+                  <li><a href="logout">Đăng xuất</a></li>
+                  </c:if>
+                  <c:if test="${sessionScope.acc ==null}">
+                   <li><a href="account.jsp">Đăng nhập</a></li>
+                  </c:if>
+                 
+                  
                 </ul>
               </div>
             </div>
@@ -100,10 +110,10 @@
               <div class="aa-logo">
                 <!-- Text based logo -->
                 <!-- img based logo -->
-                 <a href="index.html"><img src="img/logo.jpg" alt="logo img" width=280px height=100px></a> 
+                 <a href="index.jsp"><img src="img/logo.jpg" alt="logo img" width=280px height=100px></a> 
               </div>
               <!-- / logo  -->
-              
+
               <!-- search box -->
               <div class="aa-search-box">
                 <form action="">
@@ -137,51 +147,15 @@
           <div class="navbar-collapse collapse">
             <!-- Left nav -->
             <ul class="nav navbar-nav">
-              <li><a href="#">Hương nén <span class="caret"></span></a>
-                <ul class="dropdown-menu">                
-                  <li><a href="#">Hương thảo mộc  <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Hương nén</a></li>
-                      <li><a href="#">Hương sào</a></li>
-                      <li><a href="#">Hương vòng</a></li>                                      
-                    </ul>
-                  </li>
-                  <li><a href="#">Hương trầm  <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                       <li><a href="#">Hương nén</a></li>
-                      <li><a href="#">Hương sào</a></li>
-                      <li><a href="#">Hương vòng</a></li>                                      
-                    </ul>
-                  </li>
-                </ul>
-              </li>
+                <li><a href="blog-archive-2.jsp">Hương nén TM</a></li>
+                <li><a href="blog-archive-2.jsp">Hương nén trầm</a></li>
+                <li><a href="blog-archive-2.jsp">Trầm nụ</a></li>
+                <li><a href="blog-archive-2.jsp">Trà trầm</a></li>
+                <li><a href="blog-archive-2.jsp">Trầm thiền</a></li>
+                
+                <li><a href="blog-archive-2.jsp">Blog</a></li>
               
-              <li><a href="#">Trầm nụ <span class="caret"></span></a>
-                <ul class="dropdown-menu">  
-                  <li><a href="#">Nụ thảo mộc</a></li>                                                                
-                  <li><a href="#">Nụ trầm <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Trầm khói</a></li>
-                      <li><a href="#">Trầm thơm</a></li>                  
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              
-              <li><a href="#">Trà trầm </a></li>
-              
-              <li><a href="#">Trầm thiền <span class="caret"></span></a>
-                <ul class="dropdown-menu">                
-                  <li><a href="#">Bộ trầm thiền</a></li>
-                  <li><a href="#">Ống hương thiền </a></li>               
-                </ul>
-              </li>
-              
-              <li><a href="#">Bút trầm </a></li>   
-              
-              <li><a href="blog-archive-2.html">Blog</a></li>
-              
-              <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.jsp">Contact</a></li>
 
             </ul>
           </div><!--/.nav-collapse -->
@@ -190,7 +164,7 @@
     </div>
       
   </section>
-  <!-- / menu -->  
+  <!-- / menu --> 
  
   <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
@@ -291,29 +265,6 @@
      </div>
     </div>
 
-   <!-- Login Modal -->  
-  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">                      
-        <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4>Đăng nhập</h4>
-          <form class="aa-login-form" action="">
-            <label for="">Username or Email address<span>*</span></label>
-            <input type="text" placeholder="Username or email">
-            <label for="">Password<span>*</span></label>
-            <input type="password" placeholder="Password">
-            <button class="aa-browse-btn" type="submit">Login</button>
-            <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
-            <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
-            <div class="aa-register-now">
-              Don't have an account?<a href="account.html">Đăng ký ngay!</a>
-            </div>
-          </form>
-        </div>                        
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div>   
 
 
     

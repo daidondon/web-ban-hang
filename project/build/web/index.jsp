@@ -82,7 +82,7 @@
               <div class="aa-header-top-right">
                 <ul class="aa-head-top-nav-right">
                     <c:if test="${sessionScope.acc.isAdmin ==1}">  
-                  <li><a href="admin.jsp">Amin</a></li>
+                  <li><a href="load">Amin</a></li>
                     </c:if>
                   <li><a href="account.jsp">Đăng ký</a></li>
                   <c:if test="${sessionScope.acc !=null}">
@@ -371,7 +371,7 @@
               <div class="col-md-4 col-sm-4">
                 <div class="aa-latest-blog-single">
                   <figure class="aa-blog-img">                    
-                    <a href="blog-single.html"><img src="img/promo-banner-1.jpg" alt="img"></a>  
+                    <a href="blog-single.jsp"><img src="img/promo-banner-1.jpg" alt="img"></a>  
                       <figcaption class="aa-blog-img-caption">
                       <span href="blog-single.jsp"><i class="fa fa-eye"></i>5K</span>
                       <a href="blog-single.jsp"><i class="fa fa-thumbs-o-up"></i>426</a>
