@@ -203,34 +203,35 @@
   
 <form action="update" method="post">  
 <table class="table">
+    <input type="number" name="id" hidden="" value="${st.id}" >
         <tr>
             <td scope="col">Name</td>
             <td>
-                <input type="text" name="name">
+                <input type="text" name="name" value="${st.name}">
             </td>
         </tr>
         <tr>
             <td scope="col">Price</td>
             <td>
-                <input type="number" name="price">
+                <input type="number" name="price" value="${st.price}">
             </td>
         </tr>
         <tr>
             <td scope="col">Image</td>
             <td>
-                <input type="text" name="img">
+                <input type="text" name="img" value="${st.image}">
             </td>
         </tr>
         <tr>
             <td scope="col">SL</td>
             <td>
-                <input type="number" name="sl">
+                <input type="number" name="sl" value="${st.sl}">
             </td>
         </tr>
         <tr>
-            <td scope="col">Category(1-5)</td>
+            <td scope="col">Category(1-5)</td >
             <td>
-                <input type="number" name="carid">
+                <input type="number" name="carid" value="${st.cateID}">
             </td>
         </tr>
         <tr>

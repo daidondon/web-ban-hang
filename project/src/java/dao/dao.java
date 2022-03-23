@@ -201,6 +201,7 @@ public class dao {
                         
 
         } catch (Exception e) {
+            System.out.print(e.toString());
         }
     }
     

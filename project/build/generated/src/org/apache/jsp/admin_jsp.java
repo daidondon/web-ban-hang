@@ -497,7 +497,7 @@ public final class admin_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\n");
-        out.write("                            1.Hương nén TM\n");
+        out.write("                            1. Hương nén TM\n");
         out.write("                        ");
         int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -525,7 +525,7 @@ public final class admin_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_c_if_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\n");
-        out.write("                            2.Hương nén trầm\n");
+        out.write("                            2. Hương nén trầm\n");
         out.write("                        ");
         int evalDoAfterBody = _jspx_th_c_if_1.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -553,7 +553,7 @@ public final class admin_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_c_if_2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\n");
-        out.write("                            3.Trầm nụ\n");
+        out.write("                            3. Trầm nụ\n");
         out.write("                        ");
         int evalDoAfterBody = _jspx_th_c_if_2.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -581,7 +581,7 @@ public final class admin_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_c_if_3 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\n");
-        out.write("                            4.Trà trầm\n");
+        out.write("                            4. Trà trầm\n");
         out.write("                        ");
         int evalDoAfterBody = _jspx_th_c_if_3.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -609,7 +609,7 @@ public final class admin_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_c_if_4 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\n");
-        out.write("                            5.Trầm thiền\n");
+        out.write("                            5. Trầm thiền\n");
         out.write("                        ");
         int evalDoAfterBody = _jspx_th_c_if_4.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)

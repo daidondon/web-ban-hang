@@ -64,6 +64,7 @@ public class updatecontrol extends HttpServlet {
         product s =dao.getProductByID(id);
         request.setAttribute("st", s);
         request.getRequestDispatcher("Update.jsp").forward(request, response);
+        
     }
 
     /**
@@ -78,6 +79,7 @@ public class updatecontrol extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+         request.setCharacterEncoding("UTF-8");
         String id = request.getParameter("id");
         String name = request.getParameter("name");
         String price = request.getParameter("price");

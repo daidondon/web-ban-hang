@@ -257,11 +257,11 @@
                 <h4>Đăng nhập</h4>
                 <form action="login" class="aa-login-form" method="post">
                   <label for="">Username or Email address<span>*</span></label>
-                  <input type="text" placeholder="user" name="user">
+                  <input type="text" value="${username}" placeholder="user" name="user">
                    <label for="">Password<span>*</span></label>
-                   <input type="password" placeholder="pass" name="pass" >
+                   <input type="password" value="password" placeholder="pass" name="pass" >
+                   <label for="remember" class="rememberme"><input type="checkbox" id="remember" name="remember"> Remember me </label>
                     <button type="submit" class="aa-browse-btn">Login</button>
-                    <label class="rememberme" for="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
                   </form>
                 </div>
                   <h3 class="text-danger">${mess}</h3>  

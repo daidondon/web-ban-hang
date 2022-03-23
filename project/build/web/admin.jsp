@@ -224,19 +224,19 @@
                     <td>${o.sl}</td>
                     <td>
                         <c:if test="${o.cateID == 1}">
-                            1.Hương nén TM
+                            1. Hương nén TM
                         </c:if>
                         <c:if test="${o.cateID == 2 }">
-                            2.Hương nén trầm
+                            2. Hương nén trầm
                         </c:if>
                         <c:if test="${o.cateID == 3 }">
-                            3.Trầm nụ
+                            3. Trầm nụ
                         </c:if>
                         <c:if test="${o.cateID == 4 }">
-                            4.Trà trầm
+                            4. Trà trầm
                         </c:if>
                         <c:if test="${o.cateID == 5 }">
-                            5.Trầm thiền
+                            5. Trầm thiền
                         </c:if>
                     </td>
                     <td>
